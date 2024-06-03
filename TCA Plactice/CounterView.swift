@@ -42,7 +42,8 @@ struct CounterView: View {
     
     init() {
         self.store = Store(initialState: CounterFeature.State()) {
-            CounterFeature()
+            // 만약 뷰만 보고 싶다면 Feature를 주석하여 뷰에 집중할수 있다.
+            // CounterFeature()
         }
     }
 }
