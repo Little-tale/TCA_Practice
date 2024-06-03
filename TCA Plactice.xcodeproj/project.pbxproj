@@ -18,6 +18,12 @@
 		7B592E4F2C0DC0DD00E47797 /* AppFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B592E4E2C0DC0DD00E47797 /* AppFeature.swift */; };
 		7B592E592C0DC31100E47797 /* TCA_PlacticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B592E582C0DC31100E47797 /* TCA_PlacticeTests.swift */; };
 		7B592E5F2C0DC33C00E47797 /* CounterFeatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B592E502C0DC2DF00E47797 /* CounterFeatureTests.swift */; };
+		7B592E612C0DD68D00E47797 /* ContactsFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B592E602C0DD68D00E47797 /* ContactsFeature.swift */; };
+		7B592E632C0DDB1300E47797 /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B592E622C0DDB1300E47797 /* ContactsView.swift */; };
+		7B592E652C0DDC7000E47797 /* AddContactFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B592E642C0DDC7000E47797 /* AddContactFeature.swift */; };
+		7B592E672C0DDD3F00E47797 /* AddContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B592E662C0DDD3F00E47797 /* AddContactView.swift */; };
+		7B592E692C0DE17C00E47797 /* ExalmpleSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B592E682C0DE17C00E47797 /* ExalmpleSettings.swift */; };
+		7B592E6B2C0DE30B00E47797 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B592E6A2C0DE30B00E47797 /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +50,12 @@
 		7B592E502C0DC2DF00E47797 /* CounterFeatureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterFeatureTests.swift; sourceTree = "<group>"; };
 		7B592E562C0DC31100E47797 /* TCA PlacticeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TCA PlacticeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B592E582C0DC31100E47797 /* TCA_PlacticeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCA_PlacticeTests.swift; sourceTree = "<group>"; };
+		7B592E602C0DD68D00E47797 /* ContactsFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsFeature.swift; sourceTree = "<group>"; };
+		7B592E622C0DDB1300E47797 /* ContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
+		7B592E642C0DDC7000E47797 /* AddContactFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactFeature.swift; sourceTree = "<group>"; };
+		7B592E662C0DDD3F00E47797 /* AddContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactView.swift; sourceTree = "<group>"; };
+		7B592E682C0DE17C00E47797 /* ExalmpleSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExalmpleSettings.swift; sourceTree = "<group>"; };
+		7B592E6A2C0DE30B00E47797 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +107,12 @@
 				7B268A4F2C0D6D7B002690BE /* Preview Content */,
 				7B592E492C0DB97B00E47797 /* TEST.swift */,
 				7B592E4E2C0DC0DD00E47797 /* AppFeature.swift */,
+				7B592E602C0DD68D00E47797 /* ContactsFeature.swift */,
+				7B592E622C0DDB1300E47797 /* ContactsView.swift */,
+				7B592E642C0DDC7000E47797 /* AddContactFeature.swift */,
+				7B592E662C0DDD3F00E47797 /* AddContactView.swift */,
+				7B592E682C0DE17C00E47797 /* ExalmpleSettings.swift */,
+				7B592E6A2C0DE30B00E47797 /* SettingsView.swift */,
 			);
 			path = "TCA Plactice";
 			sourceTree = "<group>";
@@ -223,11 +241,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B592E4F2C0DC0DD00E47797 /* AppFeature.swift in Sources */,
+				7B592E672C0DDD3F00E47797 /* AddContactView.swift in Sources */,
 				7B268A5D2C0D7022002690BE /* CounterFeature.swift in Sources */,
 				7B268A4C2C0D6D79002690BE /* ContentView.swift in Sources */,
 				7B592E4A2C0DB97B00E47797 /* TEST.swift in Sources */,
+				7B592E692C0DE17C00E47797 /* ExalmpleSettings.swift in Sources */,
+				7B592E612C0DD68D00E47797 /* ContactsFeature.swift in Sources */,
 				7B268A4A2C0D6D79002690BE /* TCA_PlacticeApp.swift in Sources */,
 				7B592E172C0D784E00E47797 /* CounterView.swift in Sources */,
+				7B592E6B2C0DE30B00E47797 /* SettingsView.swift in Sources */,
+				7B592E652C0DDC7000E47797 /* AddContactFeature.swift in Sources */,
+				7B592E632C0DDB1300E47797 /* ContactsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
