@@ -11,6 +11,8 @@
 		7B268A4C2C0D6D79002690BE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B268A4B2C0D6D79002690BE /* ContentView.swift */; };
 		7B268A4E2C0D6D7B002690BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B268A4D2C0D6D7B002690BE /* Assets.xcassets */; };
 		7B268A512C0D6D7B002690BE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B268A502C0D6D7B002690BE /* Preview Assets.xcassets */; };
+		7B268A5B2C0D6EA0002690BE /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 7B268A5A2C0D6EA0002690BE /* ComposableArchitecture */; };
+		7B268A5D2C0D7022002690BE /* CounterFeatureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B268A5C2C0D7022002690BE /* CounterFeatureViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,7 @@
 		7B268A4B2C0D6D79002690BE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7B268A4D2C0D6D7B002690BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B268A502C0D6D7B002690BE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7B268A5C2C0D7022002690BE /* CounterFeatureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterFeatureViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B268A5B2C0D6EA0002690BE /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +55,7 @@
 		7B268A482C0D6D79002690BE /* TCA Plactice */ = {
 			isa = PBXGroup;
 			children = (
+				7B268A5C2C0D7022002690BE /* CounterFeatureViewModel.swift */,
 				7B268A492C0D6D79002690BE /* TCA_PlacticeApp.swift */,
 				7B268A4B2C0D6D79002690BE /* ContentView.swift */,
 				7B268A4D2C0D6D7B002690BE /* Assets.xcassets */,
@@ -83,6 +88,9 @@
 			dependencies = (
 			);
 			name = "TCA Plactice";
+			packageProductDependencies = (
+				7B268A5A2C0D6EA0002690BE /* ComposableArchitecture */,
+			);
 			productName = "TCA Plactice";
 			productReference = 7B268A462C0D6D79002690BE /* TCA Plactice.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +119,9 @@
 				Base,
 			);
 			mainGroup = 7B268A3D2C0D6D79002690BE;
+			packageReferences = (
+				7B268A592C0D6EA0002690BE /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = 7B268A472C0D6D79002690BE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,6 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B268A5D2C0D7022002690BE /* CounterFeatureViewModel.swift in Sources */,
 				7B268A4C2C0D6D79002690BE /* ContentView.swift in Sources */,
 				7B268A4A2C0D6D79002690BE /* TCA_PlacticeApp.swift in Sources */,
 			);
@@ -280,6 +292,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -287,9 +300,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "LittleTail.TCA-Plactice";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -309,6 +326,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -316,9 +334,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "LittleTail.TCA-Plactice";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -344,6 +366,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7B268A592C0D6EA0002690BE /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.10.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7B268A5A2C0D6EA0002690BE /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7B268A592C0D6EA0002690BE /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7B268A3E2C0D6D79002690BE /* Project object */;
 }
