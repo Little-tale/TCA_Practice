@@ -12,7 +12,7 @@ import Foundation
 struct CounterFeature {
     
     @ObservableState // TCA 의 관찰 옵저버블
-    struct State { // 상태 관리 구조체
+    struct State: Equatable { // 상태 관리 구조체
         var count = 0
         var fact: String?
         var isLoading = false

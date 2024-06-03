@@ -14,7 +14,21 @@
 		7B268A5B2C0D6EA0002690BE /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 7B268A5A2C0D6EA0002690BE /* ComposableArchitecture */; };
 		7B268A5D2C0D7022002690BE /* CounterFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B268A5C2C0D7022002690BE /* CounterFeature.swift */; };
 		7B592E172C0D784E00E47797 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B592E162C0D784E00E47797 /* CounterView.swift */; };
+		7B592E4A2C0DB97B00E47797 /* TEST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B592E492C0DB97B00E47797 /* TEST.swift */; };
+		7B592E4F2C0DC0DD00E47797 /* AppFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B592E4E2C0DC0DD00E47797 /* AppFeature.swift */; };
+		7B592E592C0DC31100E47797 /* TCA_PlacticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B592E582C0DC31100E47797 /* TCA_PlacticeTests.swift */; };
+		7B592E5F2C0DC33C00E47797 /* CounterFeatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B592E502C0DC2DF00E47797 /* CounterFeatureTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7B592E5A2C0DC31100E47797 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B268A3E2C0D6D79002690BE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B268A452C0D6D79002690BE;
+			remoteInfo = "TCA Plactice";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		7B268A462C0D6D79002690BE /* TCA Plactice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TCA Plactice.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -25,6 +39,11 @@
 		7B268A5C2C0D7022002690BE /* CounterFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterFeature.swift; sourceTree = "<group>"; };
 		7B592E162C0D784E00E47797 /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 		7B592E182C0D83CA00E47797 /* TCA-Plactice-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "TCA-Plactice-Info.plist"; sourceTree = SOURCE_ROOT; };
+		7B592E492C0DB97B00E47797 /* TEST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TEST.swift; sourceTree = "<group>"; };
+		7B592E4E2C0DC0DD00E47797 /* AppFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFeature.swift; sourceTree = "<group>"; };
+		7B592E502C0DC2DF00E47797 /* CounterFeatureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterFeatureTests.swift; sourceTree = "<group>"; };
+		7B592E562C0DC31100E47797 /* TCA PlacticeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TCA PlacticeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B592E582C0DC31100E47797 /* TCA_PlacticeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCA_PlacticeTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +55,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7B592E532C0DC31100E47797 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -43,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				7B268A482C0D6D79002690BE /* TCA Plactice */,
+				7B592E572C0DC31100E47797 /* TCA PlacticeTests */,
 				7B268A472C0D6D79002690BE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				7B268A462C0D6D79002690BE /* TCA Plactice.app */,
+				7B592E562C0DC31100E47797 /* TCA PlacticeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -65,6 +93,8 @@
 				7B268A4B2C0D6D79002690BE /* ContentView.swift */,
 				7B268A4D2C0D6D7B002690BE /* Assets.xcassets */,
 				7B268A4F2C0D6D7B002690BE /* Preview Content */,
+				7B592E492C0DB97B00E47797 /* TEST.swift */,
+				7B592E4E2C0DC0DD00E47797 /* AppFeature.swift */,
 			);
 			path = "TCA Plactice";
 			sourceTree = "<group>";
@@ -75,6 +105,15 @@
 				7B268A502C0D6D7B002690BE /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7B592E572C0DC31100E47797 /* TCA PlacticeTests */ = {
+			isa = PBXGroup;
+			children = (
+				7B592E502C0DC2DF00E47797 /* CounterFeatureTests.swift */,
+				7B592E582C0DC31100E47797 /* TCA_PlacticeTests.swift */,
+			);
+			path = "TCA PlacticeTests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -100,6 +139,24 @@
 			productReference = 7B268A462C0D6D79002690BE /* TCA Plactice.app */;
 			productType = "com.apple.product-type.application";
 		};
+		7B592E552C0DC31100E47797 /* TCA PlacticeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B592E5C2C0DC31100E47797 /* Build configuration list for PBXNativeTarget "TCA PlacticeTests" */;
+			buildPhases = (
+				7B592E522C0DC31100E47797 /* Sources */,
+				7B592E532C0DC31100E47797 /* Frameworks */,
+				7B592E542C0DC31100E47797 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7B592E5B2C0DC31100E47797 /* PBXTargetDependency */,
+			);
+			name = "TCA PlacticeTests";
+			productName = "TCA PlacticeTests";
+			productReference = 7B592E562C0DC31100E47797 /* TCA PlacticeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -112,6 +169,10 @@
 				TargetAttributes = {
 					7B268A452C0D6D79002690BE = {
 						CreatedOnToolsVersion = 15.3;
+					};
+					7B592E552C0DC31100E47797 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 7B268A452C0D6D79002690BE;
 					};
 				};
 			};
@@ -132,6 +193,7 @@
 			projectRoot = "";
 			targets = (
 				7B268A452C0D6D79002690BE /* TCA Plactice */,
+				7B592E552C0DC31100E47797 /* TCA PlacticeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -146,6 +208,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7B592E542C0DC31100E47797 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -153,14 +222,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B592E4F2C0DC0DD00E47797 /* AppFeature.swift in Sources */,
 				7B268A5D2C0D7022002690BE /* CounterFeature.swift in Sources */,
 				7B268A4C2C0D6D79002690BE /* ContentView.swift in Sources */,
+				7B592E4A2C0DB97B00E47797 /* TEST.swift in Sources */,
 				7B268A4A2C0D6D79002690BE /* TCA_PlacticeApp.swift in Sources */,
 				7B592E172C0D784E00E47797 /* CounterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7B592E522C0DC31100E47797 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B592E592C0DC31100E47797 /* TCA_PlacticeTests.swift in Sources */,
+				7B592E5F2C0DC33C00E47797 /* CounterFeatureTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7B592E5B2C0DC31100E47797 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B268A452C0D6D79002690BE /* TCA Plactice */;
+			targetProxy = 7B592E5A2C0DC31100E47797 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		7B268A522C0D6D7B002690BE /* Debug */ = {
@@ -352,6 +440,50 @@
 			};
 			name = Release;
 		};
+		7B592E5D2C0DC31100E47797 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H25F4B7J4U;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "LittleTail.TCA-PlacticeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TCA Plactice.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TCA Plactice";
+			};
+			name = Debug;
+		};
+		7B592E5E2C0DC31100E47797 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H25F4B7J4U;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "LittleTail.TCA-PlacticeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TCA Plactice.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TCA Plactice";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -369,6 +501,15 @@
 			buildConfigurations = (
 				7B268A552C0D6D7B002690BE /* Debug */,
 				7B268A562C0D6D7B002690BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7B592E5C2C0DC31100E47797 /* Build configuration list for PBXNativeTarget "TCA PlacticeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B592E5D2C0DC31100E47797 /* Debug */,
+				7B592E5E2C0DC31100E47797 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
