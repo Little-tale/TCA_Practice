@@ -6,6 +6,7 @@
 //
 
 import ComposableArchitecture
+import Foundation
 
 @Reducer // 메크로 Reducer
 struct CounterFeature {
@@ -13,11 +14,15 @@ struct CounterFeature {
     @ObservableState // TCA 의 관찰 옵저버블
     struct State { // 상태 관리 구조체
         var count = 0
+        var fact: String?
+        var isLoading = false
     }
     
     enum Action { // 사용자의 액션
         case decrementButtonTapped // 감소 버튼 탭
         case incrementButtonTapped // 증가 버튼 탭
+        case factButtonTapped
+        case factResponse(String)
     }
     
     var body: some ReducerOf<Self> {
@@ -30,9 +35,29 @@ struct CounterFeature {
             case .incrementButtonTapped:
                 state.count += 1
                 return .none
+                
+            case .factButtonTapped:
+                state.fact = nil
+                state.isLoading = true
+                return .run { [ count = state.count ] send in
+                    print("number: ", count )
+                    let (data, response) = try await URLSession.shared.data(from: URL(string: "http://numbersapi.com/\(count)")!)
+                    print("SSSS",data)
+                    let fact = String(decoding: data, as: UTF8.self)
+                    
+                    await send(.factResponse(fact))
+                }
+                
+            case let .factResponse(fact):
+                state.fact = fact
+                state.isLoading = false
+                return .none
             }
         }
     }
+}
+
+extension CounterFeature {
     
 }
 

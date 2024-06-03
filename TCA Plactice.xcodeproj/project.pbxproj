@@ -24,6 +24,7 @@
 		7B268A502C0D6D7B002690BE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7B268A5C2C0D7022002690BE /* CounterFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterFeature.swift; sourceTree = "<group>"; };
 		7B592E162C0D784E00E47797 /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
+		7B592E182C0D83CA00E47797 /* TCA-Plactice-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "TCA-Plactice-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +58,7 @@
 		7B268A482C0D6D79002690BE /* TCA Plactice */ = {
 			isa = PBXGroup;
 			children = (
+				7B592E182C0D83CA00E47797 /* TCA-Plactice-Info.plist */,
 				7B268A5C2C0D7022002690BE /* CounterFeature.swift */,
 				7B592E162C0D784E00E47797 /* CounterView.swift */,
 				7B268A492C0D6D79002690BE /* TCA_PlacticeApp.swift */,
@@ -291,6 +293,7 @@
 				DEVELOPMENT_TEAM = H25F4B7J4U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "TCA-Plactice-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -325,6 +328,7 @@
 				DEVELOPMENT_TEAM = H25F4B7J4U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "TCA-Plactice-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
