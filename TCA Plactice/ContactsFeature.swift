@@ -33,6 +33,9 @@ struct ContactsFeature {
     @ObservableState
     struct State: Equatable {
         @Presents var addConsact: AddContactFeature.State?
+        
+        @Presents var alert: AlertState<Action.Alert>?
+        
         var contacts: IdentifiedArrayOf<Contact> = [] // 유저 이름 배열인데 ID가 있음
     }
     
@@ -40,6 +43,14 @@ struct ContactsFeature {
         case addButtonTapped
         // .​PresentationAction은 자식으로부터의 액션을 부모가 받아 작업을 관찰이 가능하다.
         case addContact(PresentationAction<AddContactFeature.Action>)
+        // 삭제 로직 추가
+        case deleteButtonTapped(id: Contact.ID)
+        
+        case alert(PresentationAction<Alert>)
+        
+        enum Alert: Equatable {
+            case confirmDeletion(id: Contact.ID)
+        }
     }
     
     var body: some ReducerOf<Self> {
@@ -63,11 +74,30 @@ struct ContactsFeature {
             case .addContact:
                 return .none
                 
+            case let .deleteButtonTapped(id: id):
+                state.alert = AlertState {
+                    TextState("정말요?")
+                        .font(.headline)
+                } actions: {
+                    ButtonState(role: .destructive, action: .confirmDeletion(id: id)) {
+                        TextState("삭제")
+                            .foregroundColor(.red)
+                    }
+                }
+                
+                return .none
+            case let .alert(.presented(.confirmDeletion(id: id))):
+                state.contacts.remove(id: id)
+                return .none
+                
+            case .alert:
+                return .none
             }
         }
         .ifLet(\.$addConsact, action: \.addContact) {
             AddContactFeature()
         }
+        .ifLet(\.$alert, action: \.alert)
     }
     
 }
