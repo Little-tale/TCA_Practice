@@ -32,72 +32,91 @@ struct ContactsFeature {
     
     @ObservableState
     struct State: Equatable {
-        @Presents var addConsact: AddContactFeature.State?
-        
-        @Presents var alert: AlertState<Action.Alert>?
+    
+        @Presents var destination: Destination.State?
         
         var contacts: IdentifiedArrayOf<Contact> = [] // 유저 이름 배열인데 ID가 있음
+        
+        //        @Presents var addConsact: AddContactFeature.State?
+        //
+        //        @Presents var alert: AlertState<Action.Alert>?
+        
     }
     
     enum Action {
+        
         case addButtonTapped
-        // .​PresentationAction은 자식으로부터의 액션을 부모가 받아 작업을 관찰이 가능하다.
-        case addContact(PresentationAction<AddContactFeature.Action>)
+        
+        case destination(PresentationAction<Destination.Action>)
+        
         // 삭제 로직 추가
         case deleteButtonTapped(id: Contact.ID)
-        
-        case alert(PresentationAction<Alert>)
         
         enum Alert: Equatable {
             case confirmDeletion(id: Contact.ID)
         }
+        
+        // .​PresentationAction은 자식으로부터의 액션을 부모가 받아 작업을 관찰이 가능하다.
+        
+        //        case addContact(PresentationAction<AddContactFeature.Action>)
+        //        case alert(PresentationAction<Alert>)
     }
     
     var body: some ReducerOf<Self> {
         Reduce { state, action in
             switch action {
+                
             case .addButtonTapped:
-                state.addConsact = AddContactFeature.State (
-                    contact: Contact(id: UUID(), name: "" )
-                )
-                return .none
-                
-//            case .addContact(.presented(.delegate(.cancel))):
-//                
-//                state.addConsact = nil
-//                return .none
-                
-            case let .addContact(.presented(.delegate(.saveContact(contact)))) :
+                    state.destination = .addContact(
+                      AddContactFeature.State(
+                        contact: Contact(id: UUID(), name: "")
+                      )
+                    )
+                    return .none
+               
+            case let .destination(.presented(.addContact(.delegate(.saveContact(contact))))) :
                 state.contacts.append(contact)
-                state.addConsact = nil
-                return .none
-            case .addContact:
-                return .none
-                
-            case let .deleteButtonTapped(id: id):
-                state.alert = AlertState {
-                    TextState("정말요?")
-                        .font(.headline)
-                } actions: {
-                    ButtonState(role: .destructive, action: .confirmDeletion(id: id)) {
-                        TextState("삭제")
-                            .foregroundColor(.red)
-                    }
-                }
                 
                 return .none
-            case let .alert(.presented(.confirmDeletion(id: id))):
+                
+            case let .destination(.presented(.alert(.confirmDeletion(id: id)))) :
                 state.contacts.remove(id: id)
                 return .none
                 
-            case .alert:
+            case let .deleteButtonTapped(id: id):
+                
+                state.destination = .alert(
+                    AlertState {
+                        TextState("정말요?")
+                            .font(.headline)
+                    } actions: {
+                        ButtonState(role: .destructive, action: .confirmDeletion(id: id)) {
+                            TextState("삭제")
+                                .foregroundColor(.red)
+                        }
+                    }
+                )
+                
                 return .none
+                
+            case .destination:
+                return .none
+                
             }
+            
+            
         }
-        .ifLet(\.$addConsact, action: \.addContact) {
-            AddContactFeature()
-        }
-        .ifLet(\.$alert, action: \.alert)
+        .ifLet(\.$destination, action: \.destination)
     }
-    
 }
+
+
+extension ContactsFeature {
+    @Reducer(state: .equatable)
+    enum Destination {
+        case addContact(AddContactFeature)
+        case alert(AlertState<ContactsFeature.Action.Alert>)
+    }
+}
+
+
