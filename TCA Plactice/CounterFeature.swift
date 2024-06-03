@@ -16,6 +16,7 @@ struct CounterFeature {
         var count = 0
         var fact: String?
         var isLoading = false
+        var isTimerRunning = false
     }
     
     enum Action { // 사용자의 액션
@@ -23,7 +24,11 @@ struct CounterFeature {
         case incrementButtonTapped // 증가 버튼 탭
         case factButtonTapped
         case factResponse(String)
+        case toggleTimerButtonTapped
+        case timerTick
     }
+    
+    enum CancelID { case timer } // TCA Cancelable ID 를 제공하여 효과를 쥐소할수 있다.
     
     var body: some ReducerOf<Self> {
         Reduce { state, action in
@@ -52,7 +57,28 @@ struct CounterFeature {
                 state.fact = fact
                 state.isLoading = false
                 return .none
+                
+            case .toggleTimerButtonTapped:
+                state.isTimerRunning.toggle()
+                
+                if state.isTimerRunning {
+                    return .run { send in
+                        while true {
+                            try await Task.sleep(for: .seconds(1))
+                            await send(.timerTick)
+                        }
+                    }
+                    .cancellable(id: CancelID.timer)
+                } else {
+                    return .cancel(id: CancelID.timer)
+                }
+                
+            case .timerTick:
+                state.count += 1
+                state.fact = nil
+                return .none
             }
+            
         }
     }
 }

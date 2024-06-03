@@ -39,6 +39,15 @@ struct CounterView: View {
             }
             
             // SIDE EFFECT
+            
+            Button(store.isTimerRunning ? "Stop Timer" : "Start Timer") {
+                store.send(.toggleTimerButtonTapped)
+            }
+            .font(.largeTitle)
+            .padding()
+            .background(Color.black.opacity(0.1))
+            .cornerRadius(10)
+            
             Button("Fact") {
                 store.send(.factButtonTapped)
             }
