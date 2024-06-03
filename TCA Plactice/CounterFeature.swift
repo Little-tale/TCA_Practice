@@ -8,7 +8,7 @@
 import ComposableArchitecture
 
 @Reducer // 메크로 Reducer
-struct CounterFeatureViewModel {
+struct CounterFeature {
     
     @ObservableState // TCA 의 관찰 옵저버블
     struct State { // 상태 관리 구조체

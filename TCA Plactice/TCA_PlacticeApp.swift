@@ -11,7 +11,7 @@ import SwiftUI
 struct TCA_PlacticeApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CounterView()
         }
     }
 }
