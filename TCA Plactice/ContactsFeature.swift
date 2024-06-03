@@ -22,20 +22,40 @@ struct ContactsFeature {
     
     @ObservableState
     struct State: Equatable {
+        @Presents var addConsact: AddContactFeature.State?
         var contacts: IdentifiedArrayOf<Contact> = []
     }
     
     enum Action {
         case addButtonTapped
+        // .​PresentationAction은 자식으로부터의 액션을 부모가 받아 작업을 관찰이 가능하다.
+        case addContact(PresentationAction<AddContactFeature.Action>)
     }
     
     var body: some ReducerOf<Self> {
         Reduce { state, action in
             switch action {
             case .addButtonTapped:
-                
+                state.addConsact = AddContactFeature.State (
+                    contact: Contact(id: UUID(), name: "" )
+                )
                 return .none
+                
+            
+                
+            case .addContact(.presented(.saveButtonTapped)):
+                guard let contact = state.addConsact?.contact else { return .none}
+                state.contacts.append(contact)
+                state.addConsact = nil
+                return .none
+                
+            case .addContact:
+                return .none
+                
             }
+        }
+        .ifLet(\.$addConsact, action: \.addContact) {
+            AddContactFeature()
         }
     }
     
